@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        h2 {
+            text-align: center;
+            background-color: powderblue;
+        }
+
+        body {
+            background-color: brown;
+        }
+
+        fieldset {
+
+            margin-left: 26%;
+            margin-top: 10%;
+            border-color: black;
+            width: 300px;
+            padding: 5%;
+            height: 200px;
+            border-radius: 30px;
+            border-style: solid;
+            border-width: 5px;
+            box-shadow: 5px 5px grey;
+        }
+
+        #n1,
+        #n2 {
+
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        #n1:focus,
+        #n2:focus {
+            border-color: yellow;
+            border-width: 10px;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: pink;
+            color: blue;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            color: black;
+            background-color: grey;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <h2>COME ON LET'S DO ARITHMETIC OPERATIONS</h2>
+    <fieldset>
+        <label for="n1">INPUT 1:</label>
+        <input type="text" id="n1" placeholder="value 1" required><br>
+        <label for="n2">INPUT 2:</label>
+        <input type="text" id="n2" placeholder="value 2" required><br>
+        <div>
+            <button onclick="fun1()">ADD</button>
+            <button onclick="fun2()">SUB</button>
+            <button onclick="fun3()">MUL</button>
+            <button onclick="fun4()">DIV</button>
+        </div>
+        <h1 id="n3">RESULT:</h1>
+    </fieldset>
+    <script>
+
+        function fun1() {
+            var x1 = document.getElementById('n1');
+            var x2 = document.getElementById('n2');
+            var x3 = document.getElementById('n3');
+            var ans1 = x1.value;
+            var ans2 = x2.value;
+            x3.textContent = Number(ans1) + Number(ans2);
+            var x4 = document.getElementById('body')
+            var m = Number(ans1) + Number(ans2);
+            x3.textContent = m
+            alert(m)
+
+        }
+        function fun2() {
+            var x1 = document.getElementById('n1');
+            var x2 = document.getElementById('n2');
+            var x3 = document.getElementById('n3');
+            var ans1 = x1.value;
+            var ans2 = x2.value;
+            var x4 = document.getElementById('body')
+            x4.style.backgroundColor = "silver";
+            var m = Number(ans1) - Number(ans2);
+            x3.textContent = m
+            alert(m)
+        }
+        function fun3() {
+            var x1 = document.getElementById('n1');
+            var x2 = document.getElementById('n2');
+            var x3 = document.getElementById('n3');
+            var ans1 = x1.value;
+            var x4 = document.getElementById('body')
+            x4.style.backgroundColor = "purple";
+            var ans2 = x2.value;
+            var m = Number(ans1) * Number(ans2);
+            x3.textContent = m
+            alert(m)
+        }
+        function fun4() {
+            var x1 = document.getElementById('n1');
+            var x2 = document.getElementById('n2');
+            var x3 = document.getElementById('n3');
+            var ans1 = x1.value;
+            var x4 = document.getElementById('body')
+            x4.style.backgroundColor = "green";
+            var ans2 = x2.value;
+            var m = Number(ans1) / Number(ans2);
+            x3.textContent = m
+            alert(m)
+        }
+    </script>
+</body>
+</html>
